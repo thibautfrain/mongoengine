@@ -74,8 +74,8 @@ script:
 after_success:
 - if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then coveralls --verbose; fi
 
-notifications:
-  irc: irc.freenode.org#mongoengine
+#notifications:
+#  irc: irc.freenode.org#mongoengine
 
 # Only run builds on the master branch and GitHub releases (tagged as vX.Y.Z)
 branches:
