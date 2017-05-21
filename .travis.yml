@@ -15,12 +15,14 @@ language: python
 python:
 - 2.7
 - 3.5
+- 3.6
 - pypy
 
 env:
 - MONGODB=2.6 PYMONGO=2.7
 - MONGODB=2.6 PYMONGO=2.8
 - MONGODB=2.6 PYMONGO=3.0
+
 
 matrix:
   # Finish the build as soon as one job fails
@@ -39,6 +41,8 @@ matrix:
     env: MONGODB=2.4 PYMONGO=3.0
   - python: 3.5
     env: MONGODB=3.0 PYMONGO=3.0
+  - python: 3.6
+    env: MONGODB=3.4 PYMONGO=3.4
 
 before_install:
 - bash .install_mongodb_on_travis.sh
