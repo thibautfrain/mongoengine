@@ -21,7 +21,7 @@ elif [ "$MONGODB" = "3.0" ]; then
 elif [ "$MONGODB" = "3.4" ]; then
     echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
     sudo apt-get update
-    sudo apt-get install mongodb-org-server
+    sudo apt-get install mongodb-org-server=3.4.4
 else
     echo "Invalid MongoDB version, expected 2.4, 2.6, 3.0, or 3.4."
     exit 1
